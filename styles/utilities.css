@@ -1,0 +1,29 @@
+/* Reveal animations */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+.reveal-delay-4{transition-delay:0.4s}
+
+/* Sections */
+section{position:relative;z-index:1}
+
+/* Section common */
+.section-inner{max-width:1200px;margin:0 auto;padding:6rem 2rem}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--orange);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.8rem}
+.section-label::before{content:'';width:32px;height:1px;background:var(--orange)}
+.section-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.1;margin-bottom:1rem}
+.section-title span{color:var(--orange)}
+.section-sub{font-size:1rem;color:var(--muted);max-width:500px;line-height:1.7}
+
+/* Divider */
+.section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent);margin:0 2rem}
+
+/* Glowing section headers */
+.glow-line{width:60px;height:2px;background:linear-gradient(90deg,var(--orange),transparent);margin-bottom:2rem;margin-top:0.5rem}
+
+/* Responsive */
+@media(max-width:600px){
+  .section-inner{padding:4rem 1.2rem}
+}

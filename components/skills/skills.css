@@ -1,0 +1,16 @@
+#skills{background:var(--bg2)}
+.skills-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.skill-tab{font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.45rem 1rem;border-radius:100px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:none;transition:all 0.2s}
+.skill-tab.active,.skill-tab:hover{background:rgba(249,115,22,0.12);border-color:var(--border2);color:var(--orange)}
+.skill-tab.active{background:var(--orange);color:#000;border-color:var(--orange)}
+.skill-panel{display:none}
+.skill-panel.active{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:1rem}
+.skill-card{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:1.4rem 0.8rem 1rem;display:flex;flex-direction:column;align-items:center;gap:0.7rem;transition:all 0.25s;cursor:default;position:relative;overflow:hidden}
+.skill-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(249,115,22,0.07),transparent);opacity:0;transition:opacity 0.25s;border-radius:14px}
+.skill-card:hover{border-color:var(--border2);transform:translateY(-5px);box-shadow:0 12px 40px rgba(249,115,22,0.12)}
+.skill-card:hover::after{opacity:1}
+.skill-card:hover .skill-icon-wrap{box-shadow:0 0 20px rgba(249,115,22,0.3);border-color:var(--border2)}
+.skill-icon-wrap{width:52px;height:52px;border-radius:12px;background:rgba(249,115,22,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all 0.25s;flex-shrink:0}
+.skill-icon-wrap svg,.skill-icon-wrap img{width:28px;height:28px}
+.skill-name{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:500;color:var(--muted);text-align:center;transition:color 0.2s;line-height:1.3}
+.skill-card:hover .skill-name{color:var(--orange2)}
