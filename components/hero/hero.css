@@ -1,52 +1,45 @@
+/* ===== HERO SECTION ===== */
 #hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:6rem 2rem 4rem;overflow:hidden}
 .hero-bg{position:absolute;inset:0;overflow:hidden}
 .hero-blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.12}
 .hero-blob-1{width:600px;height:600px;background:var(--orange);top:-100px;right:-200px;animation:blobFloat 8s ease-in-out infinite}
 .hero-blob-2{width:400px;height:400px;background:var(--amber);bottom:-100px;left:-100px;animation:blobFloat 10s ease-in-out infinite reverse}
 @keyframes blobFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-30px) scale(1.05)}}
+
+/* Grid layout */
 .hero-grid{max-width:1200px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:3rem;text-align:center}
-  .hero-content{order:2}
-  .hero-visual{order:1}
-  .hero-socials{justify-content:center}
-  .hero-actions{justify-content:center}
-}
-@media(max-width:600px){
-  #hero{padding:5rem 1.2rem 3rem}
-  .hero-actions{flex-direction:column;align-items:stretch}
-  .hero-actions a{text-align:center;justify-content:center}
-}
+
+/* Badge */
 .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(249,115,22,0.1);border:1px solid var(--border2);border-radius:100px;padding:0.4rem 1rem;font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--orange2);margin-bottom:1.5rem;animation:fadeUp 0.6s ease both}
-.hero-badge::before{content:'';width:10px;height:10px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite}
+.hero-badge::before{content:'';width:10px;height:10px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
-.hero-name{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:800;line-height:1;letter-spacing:-2px;color:#fff;margin-bottom:0.5rem;animation:fadeUp 0.6s 0.1s ease both}
-.hero-title{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,3.5vw,2.8rem);font-weight:700;color:var(--orange);line-height:1.1;margin-bottom:1rem;animation:fadeUp 0.6s 0.2s ease both}
-.hero-typed{font-family:'JetBrains Mono',monospace;font-size:clamp(0.9rem,2vw,1.1rem);color:var(--muted);margin-bottom:1.5rem;height:1.6rem;animation:fadeUp 0.6s 0.3s ease both}
+
+/* Typography */
+.hero-name{font-family:'Syne',sans-serif;font-size:clamp(2.4rem,6vw,5rem);font-weight:800;line-height:1;letter-spacing:-2px;color:#fff;margin-bottom:0.5rem;animation:fadeUp 0.6s 0.1s ease both}
+.hero-title{font-family:'Syne',sans-serif;font-size:clamp(1.2rem,3.5vw,2.8rem);font-weight:700;color:var(--orange);line-height:1.1;margin-bottom:1rem;animation:fadeUp 0.6s 0.2s ease both}
+.hero-typed{font-family:'JetBrains Mono',monospace;font-size:clamp(0.8rem,2vw,1.1rem);color:var(--muted);margin-bottom:1.5rem;height:1.6rem;animation:fadeUp 0.6s 0.3s ease both}
 .hero-typed .cursor-blink{color:var(--orange);animation:blink 1s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-.hero-intro{font-size:1rem;color:var(--muted);line-height:1.7;max-width:480px;margin-bottom:2rem;animation:fadeUp 0.6s 0.4s ease both}
+.hero-intro{font-size:clamp(0.88rem,1.5vw,1rem);color:var(--muted);line-height:1.7;max-width:480px;margin-bottom:2rem;animation:fadeUp 0.6s 0.4s ease both}
 .hero-intro em{color:var(--orange2);font-style:normal}
-@media(max-width:900px){.hero-intro{max-width:100%;margin-left:auto;margin-right:auto}}
+
+/* Buttons */
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;animation:fadeUp 0.6s 0.5s ease both}
 .btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--orange);color:#000;font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;padding:0.8rem 1.6rem;border-radius:4px;text-decoration:none;letter-spacing:0.03em;transition:all 0.2s;border:none;cursor:pointer}
 .btn-primary:hover{background:var(--amber);box-shadow:0 0 30px rgba(249,115,22,0.4);transform:translateY(-2px)}
 .btn-outline{display:inline-flex;align-items:center;gap:0.5rem;background:transparent;color:var(--text);font-family:'Syne',sans-serif;font-weight:600;font-size:0.85rem;padding:0.8rem 1.6rem;border-radius:4px;text-decoration:none;letter-spacing:0.03em;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;cursor:pointer}
 .btn-outline:hover{border-color:var(--orange);color:var(--orange);box-shadow:0 0 20px var(--glow2)}
+
+/* Socials */
 .hero-socials{display:flex;gap:1rem;animation:fadeUp 0.6s 0.6s ease both}
 .social-link{width:40px;height:40px;border:1px solid var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all 0.2s;background:rgba(255,255,255,0.02)}
 .social-link:hover{border-color:var(--orange);background:var(--glow2);transform:translateY(-3px);box-shadow:0 0 15px var(--glow)}
 .social-link svg{width:18px;height:18px;fill:var(--muted);transition:fill 0.2s}
 .social-link:hover svg{fill:var(--orange)}
+
+/* Avatar */
 .hero-visual{display:flex;align-items:center;justify-content:center;animation:fadeUp 0.8s 0.3s ease both}
 .avatar-wrap{position:relative;width:320px;height:320px}
-@media(max-width:600px){
-  .avatar-wrap{width:200px;height:200px}
-  .floating-tag{font-size:0.6rem;padding:0.3rem 0.6rem}
-  .floating-tag-1{top:-8px;left:-10px}
-  .floating-tag-2{bottom:10px;right:-10px}
-  .floating-tag-3{bottom:-8px;left:5px}
-}
 .avatar-ring{position:absolute;inset:-20px;border:1px solid var(--border2);border-radius:50%;animation:spin 20s linear infinite}
 .avatar-ring-2{position:absolute;inset:-40px;border:1px dashed rgba(249,115,22,0.1);border-radius:50%;animation:spin 30s linear infinite reverse}
 .avatar-core{width:100%;height:100%;border-radius:50%;background:linear-gradient(135deg,#1a1a1a,#0e0e0e);border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:0 0 60px rgba(249,115,22,0.15),inset 0 0 60px rgba(249,115,22,0.03)}
@@ -54,6 +47,8 @@
 .avatar-image{object-fit:cover;border-radius:50%;z-index:1}
 .avatar-glow{position:absolute;width:150px;height:150px;background:var(--orange);border-radius:50%;filter:blur(60px);opacity:0.08;animation:glow 3s ease-in-out infinite}
 @keyframes glow{0%,100%{opacity:0.08;transform:scale(1)}50%{opacity:0.15;transform:scale(1.2)}}
+
+/* Floating tags */
 .floating-tag{position:absolute;background:rgba(14,14,14,0.9);border:1px solid var(--border2);border-radius:8px;padding:0.5rem 0.8rem;font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--orange2);white-space:nowrap;backdrop-filter:blur(10px);z-index:10}
 .floating-tag-1{top:-10px;left:-30px;animation:float1 4s ease-in-out infinite}
 .floating-tag-2{bottom:20px;right:-40px;animation:float2 5s ease-in-out infinite}
@@ -62,3 +57,65 @@
 @keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
 @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== TABLET LANDSCAPE / SMALL LAPTOP (1024px) ===== */
+@media(max-width:1024px){
+  .hero-grid{gap:2.5rem}
+  .avatar-wrap{width:280px;height:280px}
+}
+
+/* ===== TABLET PORTRAIT (768px) ===== */
+@media(max-width:768px){
+  .hero-grid{grid-template-columns:1fr;gap:2.5rem;text-align:center}
+  .hero-content{order:2}
+  .hero-visual{order:1}
+  .hero-socials{justify-content:center}
+  .hero-actions{justify-content:center}
+  .hero-intro{max-width:100%;margin-left:auto;margin-right:auto}
+  .avatar-wrap{width:240px;height:240px}
+  .floating-tag-1{left:-10px}
+  .floating-tag-2{right:-10px}
+}
+
+/* ===== LARGE PHONES (600px) ===== */
+@media(max-width:600px){
+  #hero{padding:5rem 1.2rem 3rem}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions a{text-align:center;justify-content:center}
+  .avatar-wrap{width:200px;height:200px}
+  .floating-tag{font-size:0.6rem;padding:0.3rem 0.6rem}
+  .floating-tag-1{top:-8px;left:-5px}
+  .floating-tag-2{bottom:10px;right:-5px}
+  .floating-tag-3{bottom:-8px;left:5px}
+}
+
+/* ===== MEDIUM PHONES 6.5" (430px) ===== */
+@media(max-width:430px){
+  #hero{padding:4.5rem 1rem 2.5rem}
+  .hero-badge{font-size:0.62rem;padding:0.3rem 0.75rem}
+  .hero-name{letter-spacing:-1px}
+  .hero-typed{font-size:0.78rem}
+  .hero-intro{font-size:0.88rem}
+  .avatar-wrap{width:175px;height:175px}
+  .floating-tag{font-size:0.55rem;padding:0.25rem 0.5rem;border-radius:5px}
+  .floating-tag-1{top:-6px;left:-2px}
+  .floating-tag-2{bottom:8px;right:-2px}
+  .floating-tag-3{bottom:-6px;left:2px}
+}
+
+/* ===== SMALL PHONES (375px) ===== */
+@media(max-width:375px){
+  #hero{padding:4rem 0.85rem 2rem}
+  .hero-badge{font-size:0.58rem}
+  .avatar-wrap{width:155px;height:155px}
+  .hero-socials{gap:0.6rem}
+  .social-link{width:36px;height:36px}
+}
+
+/* ===== VERY SMALL PHONES (320px) ===== */
+@media(max-width:320px){
+  #hero{padding:3.5rem 0.75rem 1.5rem}
+  .avatar-wrap{width:135px;height:135px}
+  .floating-tag{display:none}
+  .btn-primary,.btn-outline{font-size:0.78rem;padding:0.7rem 1.1rem}
+}

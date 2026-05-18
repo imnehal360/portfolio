@@ -1,21 +1,27 @@
 #about{background:var(--bg)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-@media(max-width:900px){
-  .about-grid{grid-template-columns:1fr}
-}
 .about-text p{color:var(--muted);line-height:1.8;margin-bottom:1rem;font-size:1rem}
 .about-text p em{color:var(--orange2);font-style:normal;font-weight:500}
 .about-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem}
 .tag{background:rgba(249,115,22,0.08);border:1px solid var(--border);border-radius:4px;padding:0.3rem 0.8rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--orange2)}
 .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-@media(max-width:600px){
-  .stats-grid{grid-template-columns:1fr}
-  .stat-card:last-child:nth-child(odd){grid-column:span 1}
-}
-.stat-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.5rem;position:relative;overflow:hidden;transition:all 0.3s;group:hover}
+.stat-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.5rem;position:relative;overflow:hidden;transition:all 0.3s}
 .stat-card:last-child:nth-child(odd){grid-column:span 2}
 .stat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(249,115,22,0.06),transparent);opacity:0;transition:opacity 0.3s}
 .stat-card:hover{border-color:var(--border2);box-shadow:0 0 30px var(--glow2);transform:translateY(-3px)}
 .stat-card:hover::before{opacity:1}
 .stat-num{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--orange);display:block;line-height:1}
 .stat-label{font-family:'DM Sans',sans-serif;font-size:0.82rem;color:var(--muted);margin-top:0.4rem;line-height:1.4}
+@media(max-width:1024px){.about-grid{gap:3rem}}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:2.5rem}}
+@media(max-width:430px){
+  .about-text p{font-size:0.9rem}
+  .stats-grid{grid-template-columns:1fr}
+  .stat-card:last-child:nth-child(odd){grid-column:span 1}
+  .stat-num{font-size:1.8rem}
+  .stat-label{font-size:0.78rem}
+  .stat-card{padding:1.1rem}
+  .tag{font-size:0.65rem;padding:0.25rem 0.6rem}
+}
+@media(max-width:375px){.stat-num{font-size:1.6rem}.stat-card{padding:0.9rem}}
+@media(max-width:320px){.stat-num{font-size:1.4rem}.stat-card{padding:0.8rem}.tag{font-size:0.6rem}}

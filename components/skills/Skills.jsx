@@ -167,7 +167,7 @@ export default function Skills() {
           </div>
           <div className="skill-card">
             <div className="skill-icon-wrap">
-              <svg viewBox="0 0 128 128"><path fill="#EE4C2C" d="M16 48h96v8H16zm0 24h96v8H16zm8-40h80v8H24zm0 56h80v8H24z"/><rect fill="rgba(238,76,44,0.4)" x="16" y="20" width="96" height="88" rx="8" stroke="#EE4C2C" stroke-width="2" fill="none"/><circle fill="#EE4C2C" cx="32" cy="64" r="5"/><circle fill="#EE4C2C" cx="64" cy="64" r="5"/><circle fill="#EE4C2C" cx="96" cy="64" r="5"/></svg>
+              <svg viewBox="0 0 128 128"><path fill="#EE4C2C" d="M16 48h96v8H16zm0 24h96v8H16zm8-40h80v8H24zm0 56h80v8H24z"/><rect fill="rgba(238,76,44,0.4)" x="16" y="20" width="96" height="88" rx="8" stroke="#EE4C2C" strokeWidth="2" fill="none"/><circle fill="#EE4C2C" cx="32" cy="64" r="5"/><circle fill="#EE4C2C" cx="64" cy="64" r="5"/><circle fill="#EE4C2C" cx="96" cy="64" r="5"/></svg>
             </div>
             <span className="skill-name">CNN / LSTM</span>
           </div>
@@ -201,7 +201,7 @@ export default function Skills() {
           </div>
           <div className="skill-card">
             <div className="skill-icon-wrap">
-              <svg viewBox="0 0 128 128"><ellipse fill="#00758F" cx="64" cy="72" rx="48" ry="16"/><ellipse fill="#00758F" cx="64" cy="56" rx="48" ry="16" opacity="0.7"/><ellipse fill="#00758F" cx="64" cy="40" rx="48" ry="16" opacity="0.5"/><path fill="none" stroke="#00758F" stroke-width="4" d="M16 40v32M112 40v32"/></svg>
+              <svg viewBox="0 0 128 128"><ellipse fill="#00758F" cx="64" cy="72" rx="48" ry="16"/><ellipse fill="#00758F" cx="64" cy="56" rx="48" ry="16" opacity="0.7"/><ellipse fill="#00758F" cx="64" cy="40" rx="48" ry="16" opacity="0.5"/><path fill="none" stroke="#00758F" strokeWidth="4" d="M16 40v32M112 40v32"/></svg>
             </div>
             <span className="skill-name">SQL</span>
           </div>

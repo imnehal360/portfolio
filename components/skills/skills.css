@@ -1,11 +1,6 @@
 #skills{background:var(--bg2)}
 .skills-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
-@media(max-width:480px){
-  .skills-tabs{flex-wrap:nowrap;overflow-x:auto;padding-bottom:0.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .skills-tabs::-webkit-scrollbar{display:none}
-  .skill-tab{flex-shrink:0}
-}
-.skill-tab{font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.45rem 1rem;border-radius:100px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:none;transition:all 0.2s}
+.skill-tab{font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.45rem 1rem;border-radius:100px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all 0.2s}
 .skill-tab.active,.skill-tab:hover{background:rgba(249,115,22,0.12);border-color:var(--border2);color:var(--orange)}
 .skill-tab.active{background:var(--orange);color:#000;border-color:var(--orange)}
 .skill-panel{display:none}
@@ -19,3 +14,26 @@
 .skill-icon-wrap svg,.skill-icon-wrap img{width:28px;height:28px}
 .skill-name{font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:500;color:var(--muted);text-align:center;transition:color 0.2s;line-height:1.3}
 .skill-card:hover .skill-name{color:var(--orange2)}
+@media(max-width:768px){.skill-panel.active{grid-template-columns:repeat(auto-fill,minmax(100px,1fr))}}
+@media(max-width:600px){
+  .skills-tabs{flex-wrap:nowrap;overflow-x:auto;padding-bottom:0.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .skills-tabs::-webkit-scrollbar{display:none}
+  .skill-tab{flex-shrink:0}
+  .skill-panel.active{grid-template-columns:repeat(auto-fill,minmax(90px,1fr))}
+}
+@media(max-width:430px){
+  .skill-panel.active{grid-template-columns:repeat(3,1fr);gap:0.7rem}
+  .skill-card{padding:1rem 0.5rem 0.8rem}
+  .skill-icon-wrap{width:42px;height:42px}
+  .skill-icon-wrap svg,.skill-icon-wrap img{width:22px;height:22px}
+  .skill-name{font-size:0.65rem}
+}
+@media(max-width:375px){
+  .skill-panel.active{grid-template-columns:repeat(3,1fr);gap:0.5rem}
+  .skill-card{padding:0.85rem 0.4rem 0.7rem}
+  .skill-icon-wrap{width:38px;height:38px}
+}
+@media(max-width:320px){
+  .skill-panel.active{grid-template-columns:repeat(2,1fr)}
+  .skill-name{font-size:0.6rem}
+}
