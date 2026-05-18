@@ -1,5 +1,10 @@
 #skills{background:var(--bg2)}
 .skills-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+@media(max-width:480px){
+  .skills-tabs{flex-wrap:nowrap;overflow-x:auto;padding-bottom:0.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .skills-tabs::-webkit-scrollbar{display:none}
+  .skill-tab{flex-shrink:0}
+}
 .skill-tab{font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.45rem 1rem;border-radius:100px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:none;transition:all 0.2s}
 .skill-tab.active,.skill-tab:hover{background:rgba(249,115,22,0.12);border-color:var(--border2);color:var(--orange)}
 .skill-tab.active{background:var(--orange);color:#000;border-color:var(--orange)}

@@ -178,7 +178,7 @@
   padding: 1.2rem;
   border-radius: 8px;
   border: none;
-  cursor: none;
+  cursor: pointer;
   transition: all 0.3s;
   letter-spacing: 0.05em;
   margin-top: 0.5rem;

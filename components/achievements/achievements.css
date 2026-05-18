@@ -1,5 +1,8 @@
 #achievements{background:var(--bg2)}
 .achievements-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+@media(max-width:480px){
+  .achievements-grid{grid-template-columns:1fr}
+}
 .achievement-card{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:1.8rem;position:relative;overflow:hidden;transition:all 0.3s}
 .achievement-card:hover{border-color:var(--border2);box-shadow:0 0 30px var(--glow2);transform:translateY(-3px)}
 .achievement-icon{width:44px;height:44px;background:rgba(249,115,22,0.1);border:1px solid var(--border2);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.3rem}

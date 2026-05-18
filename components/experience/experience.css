@@ -11,3 +11,8 @@
 .exp-features li{font-size:0.9rem;color:var(--muted);padding-left:1.2rem;position:relative;line-height:1.5}
 .exp-features li::before{content:'→';position:absolute;left:0;color:var(--orange);font-size:0.8rem}
 .exp-tech{display:flex;flex-wrap:wrap;gap:0.5rem}
+@media(max-width:600px){
+  .experience-card{padding:1.4rem}
+  .exp-role{font-size:1.1rem}
+  .exp-header{flex-direction:column}
+}

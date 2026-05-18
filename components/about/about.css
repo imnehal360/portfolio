@@ -9,7 +9,8 @@
 .tag{background:rgba(249,115,22,0.08);border:1px solid var(--border);border-radius:4px;padding:0.3rem 0.8rem;font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--orange2)}
 .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 @media(max-width:600px){
-  .stats-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:1fr}
+  .stat-card:last-child:nth-child(odd){grid-column:span 1}
 }
 .stat-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.5rem;position:relative;overflow:hidden;transition:all 0.3s;group:hover}
 .stat-card:last-child:nth-child(odd){grid-column:span 2}
