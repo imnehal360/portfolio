@@ -38,8 +38,8 @@ function AnimatedCounter({ target, isDecimal = false }) {
     };
   }, [target]);
 
-  const suffix = target === 99 ? '' : target >= 600 ? '+' : '';
-  
+  const suffix = target === 99 ? '' : target >= 650 ? '+' : '';
+
   return <span className="stat-num" ref={ref}>{count}{suffix}</span>;
 }
 
@@ -69,7 +69,7 @@ export default function About() {
         <div className="about-grid">
           <div className="about-text reveal">
             <div className="section-label">Who I am</div>
-            <h2 className="section-title">Crafting the future,<br/><span>one commit</span> at a time.</h2>
+            <h2 className="section-title">Crafting the future,<br /><span>one commit</span> at a time.</h2>
             <div className="glow-line"></div>
             <p>I'm Muhammad Nehal — a <em>Computer Science student at IIIT Manipur</em> with a deep passion for building systems that matter. From architecting MERN stack applications to engineering AI-powered solutions, I thrive at the intersection of software and intelligence.</p>
             <p>My journey into tech started with competitive programming, where I developed a <em>strong problem-solving mindset</em>. Today, I apply that rigor to everything I build — whether it's a production-ready API, a multimodal ML pipeline, or a polished user interface.</p>
@@ -86,7 +86,7 @@ export default function About() {
           </div>
           <div className="stats-grid reveal reveal-delay-2">
             <div className="stat-card">
-              <AnimatedCounter target={600} />
+              <AnimatedCounter target={650} />
               <div className="stat-label">DSA Problems Solved across platforms</div>
             </div>
             <div className="stat-card">
