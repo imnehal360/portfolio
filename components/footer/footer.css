@@ -1,14 +1,14 @@
 footer{background:var(--bg);border-top:1px solid var(--border);padding:2rem;text-align:center}
-.footer-text{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--muted)}
-.footer-text span{color:var(--orange)}
+.footer-text{font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--muted)}
+.footer-text span{color:inherit}
 .footer-links{display:flex;justify-content:center;gap:1.5rem;margin-bottom:1rem;flex-wrap:wrap}
-.footer-links a{font-size:0.82rem;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.footer-links a{font-size:0.9rem;color:var(--muted);text-decoration:none;transition:color 0.2s}
 .footer-links a:hover{color:var(--orange)}
 @media(max-width:430px){
   footer{padding:1.5rem 1rem}
   .footer-links{gap:1rem}
-  .footer-links a{font-size:0.75rem}
-  .footer-text{font-size:0.72rem}
+  .footer-links a{font-size:0.85rem}
+  .footer-text{font-size:0.8rem}
 }
 @media(max-width:320px){
   .footer-links{flex-direction:column;align-items:center;gap:0.6rem}

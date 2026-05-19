@@ -10,24 +10,24 @@
 .hero-grid{max-width:1200px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 
 /* Badge */
-.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(249,115,22,0.1);border:1px solid var(--border2);border-radius:100px;padding:0.4rem 1rem;font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--orange2);margin-bottom:1.5rem;animation:fadeUp 0.6s ease both}
+.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;background:rgba(249,115,22,0.1);border:1px solid var(--border2);border-radius:100px;padding:0.5rem 1.2rem;font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--orange2);margin-bottom:1.5rem;animation:fadeUp 0.6s ease both}
 .hero-badge::before{content:'';width:10px;height:10px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
 
 /* Typography */
 .hero-name{font-family:'Syne',sans-serif;font-size:clamp(2.4rem,6vw,5rem);font-weight:800;line-height:1;letter-spacing:-2px;color:#fff;margin-bottom:0.5rem;animation:fadeUp 0.6s 0.1s ease both}
 .hero-title{font-family:'Syne',sans-serif;font-size:clamp(1.2rem,3.5vw,2.8rem);font-weight:700;color:var(--orange);line-height:1.1;margin-bottom:1rem;animation:fadeUp 0.6s 0.2s ease both}
-.hero-typed{font-family:'JetBrains Mono',monospace;font-size:clamp(0.8rem,2vw,1.1rem);color:var(--muted);margin-bottom:1.5rem;height:1.6rem;animation:fadeUp 0.6s 0.3s ease both}
+.hero-typed{font-family:'JetBrains Mono',monospace;font-size:clamp(0.95rem,2vw,1.15rem);color:var(--muted);margin-bottom:1.5rem;height:1.6rem;animation:fadeUp 0.6s 0.3s ease both}
 .hero-typed .cursor-blink{color:var(--orange);animation:blink 1s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-.hero-intro{font-size:clamp(0.88rem,1.5vw,1rem);color:var(--muted);line-height:1.7;max-width:480px;margin-bottom:2rem;animation:fadeUp 0.6s 0.4s ease both}
-.hero-intro em{color:var(--orange2);font-style:normal}
+.hero-intro{font-size:clamp(1rem,1.5vw,1.15rem);color:var(--muted);line-height:1.7;max-width:540px;margin-bottom:2rem;animation:fadeUp 0.6s 0.4s ease both}
+.hero-intro em{color:inherit;font-style:normal}
 
 /* Buttons */
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;animation:fadeUp 0.6s 0.5s ease both}
-.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--orange);color:#000;font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;padding:0.8rem 1.6rem;border-radius:4px;text-decoration:none;letter-spacing:0.03em;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--orange);color:#000;font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;padding:0.9rem 1.8rem;border-radius:4px;text-decoration:none;letter-spacing:0.03em;transition:all 0.2s;border:none;cursor:pointer}
 .btn-primary:hover{background:var(--amber);box-shadow:0 0 30px rgba(249,115,22,0.4);transform:translateY(-2px)}
-.btn-outline{display:inline-flex;align-items:center;gap:0.5rem;background:transparent;color:var(--text);font-family:'Syne',sans-serif;font-weight:600;font-size:0.85rem;padding:0.8rem 1.6rem;border-radius:4px;text-decoration:none;letter-spacing:0.03em;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;cursor:pointer}
+.btn-outline{display:inline-flex;align-items:center;gap:0.5rem;background:transparent;color:var(--text);font-family:'Syne',sans-serif;font-weight:600;font-size:0.95rem;padding:0.9rem 1.8rem;border-radius:4px;text-decoration:none;letter-spacing:0.03em;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;cursor:pointer}
 .btn-outline:hover{border-color:var(--orange);color:var(--orange);box-shadow:0 0 20px var(--glow2)}
 
 /* Socials */
@@ -92,10 +92,10 @@
 /* ===== MEDIUM PHONES 6.5" (430px) ===== */
 @media(max-width:430px){
   #hero{padding:4.5rem 1rem 2.5rem}
-  .hero-badge{font-size:0.62rem;padding:0.3rem 0.75rem}
+  .hero-badge{font-size:0.75rem;padding:0.4rem 0.85rem}
   .hero-name{letter-spacing:-1px}
-  .hero-typed{font-size:0.78rem}
-  .hero-intro{font-size:0.88rem}
+  .hero-typed{font-size:0.85rem}
+  .hero-intro{font-size:0.95rem}
   .avatar-wrap{width:175px;height:175px}
   .floating-tag{font-size:0.55rem;padding:0.25rem 0.5rem;border-radius:5px}
   .floating-tag-1{top:-6px;left:-2px}

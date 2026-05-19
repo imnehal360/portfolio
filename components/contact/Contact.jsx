@@ -92,20 +92,20 @@ export default function Contact() {
               <div className="form-row">
                 <div className="form-group">
                   <label className="form-label">Your Name</label>
-                  <input type="text" name="name" className="form-input" placeholder="John Doe" required />
+                  <input type="text" name="name" className="form-input" placeholder="Your Name" required />
                 </div>
                 <div className="form-group">
                   <label className="form-label">Email Address</label>
-                  <input type="email" name="email" className="form-input" placeholder="john@example.com" required />
+                  <input type="email" name="email" className="form-input" placeholder="Email Address" required />
                 </div>
               </div>
               <div className="form-group">
                 <label className="form-label">Subject</label>
-                <input type="text" name="subject" className="form-input" placeholder="Project collaboration, job opportunity..." required />
+                <input type="text" name="subject" className="form-input" placeholder="Subject" required />
               </div>
               <div className="form-group">
                 <label className="form-label">Message</label>
-                <textarea name="message" className="form-textarea" placeholder="Tell me about your project or idea..." required></textarea>
+                <textarea name="message" className="form-textarea" placeholder="Message" required></textarea>
               </div>
               <button type="submit" className="form-submit" style={{ background: btnColor }}>
                 {btnText}
