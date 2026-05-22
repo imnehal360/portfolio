@@ -63,7 +63,7 @@ export default function Hero() {
               View Projects
             </a>
             <a href="#contact" className="btn-outline">Contact Me</a>
-            <a href="/resume/resume_nehal.pdf" target="_blank" rel="noopener noreferrer" className="btn-outline">Download Resume</a>
+            <a href="/api/resume" download="Muhammad_Nehal_Resume.pdf" className="btn-outline">Download Resume</a>
           </div>
           <div className="hero-socials">
             <a href="https://github.com/imnehal360" className="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
