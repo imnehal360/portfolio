@@ -43,8 +43,10 @@ export default function Experience() {
             <div className="exp-body">
               <p>Currently working as a backend developer intern, collaborating with a team to build robust and scalable architecture for the Kickbegin platform. Actively involved in developing backend services and integrating them seamlessly with the frontend.</p>
               <ul className="exp-features">
-                <li>Designing and developing backend APIs using Nest.js and PostgreSQL.</li>
-                <li>Integrating frontend Next.js applications with the backend architecture.</li>
+                <li>Built a multi-agent RAG pipeline for AI-powered interviews using Python microservices and a ChromaDB-backed Embedding Service for semantic question generation.</li>
+                <li>Integrated Google Gemini API for resume parsing and AI-driven answer evaluation.</li>
+                <li>Assisted in deploying the full-stack application on AWS EC2 using Docker Compose, helping containerize services, configure the deployment environment, and troubleshoot production issues.</li>
+                <li>Guided a junior developer by providing technical guidance, assisting with debugging, and reviewing code.</li>
                 <li>Working extensively with JavaScript and modern full-stack frameworks.</li>
                 <li>Collaborating with cross-functional team members to deliver core platform features.</li>
               </ul>

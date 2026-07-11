@@ -9,7 +9,7 @@ export default function Footer() {
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
-      <div className="footer-text">Built with <span>Next.js</span> &amp; <span>Passion</span> by Muhammad Nehal &nbsp;·&nbsp; © 2025</div>
+      <div className="footer-text">Built with <span>Next.js</span> &amp; <span>Passion</span> by Muhammad Nehal &nbsp;·&nbsp; © 2026</div>
     </footer>
   );
 }

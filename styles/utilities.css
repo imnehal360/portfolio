@@ -7,13 +7,13 @@
 .reveal-delay-4{transition-delay:0.4s}
 
 /* Sections */
-section{position:relative;z-index:1}
+section{position:relative;z-index:1;overflow:clip}
 
 /* Section common */
-.section-inner{max-width:1200px;margin:0 auto;padding:6rem 2rem}
-.section-label{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--orange);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.8rem}
-.section-label::before{content:'';width:32px;height:1px;background:var(--orange);flex-shrink:0}
-.section-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.2;margin-bottom:1rem}
+.section-inner{max-width:1160px;margin:0 auto;padding:6.5rem 2rem}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:0.76rem;color:var(--cyan);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.8rem}
+.section-label::before{content:'';width:32px;height:1px;background:linear-gradient(90deg,var(--cyan),var(--orange));flex-shrink:0}
+.section-title{font-family:'Syne',sans-serif;font-size:3.2rem;font-weight:800;color:#fff;letter-spacing:0;line-height:1.06;margin-bottom:1rem}
 .section-title span{color:inherit}
 .section-sub{font-size:1.1rem;color:var(--muted);max-width:560px;line-height:1.8}
 
@@ -21,24 +21,25 @@ section{position:relative;z-index:1}
 .section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent);margin:0 2rem}
 
 /* Glowing section headers */
-.glow-line{width:60px;height:2px;background:linear-gradient(90deg,var(--orange),transparent);margin-bottom:2rem;margin-top:0.5rem}
+.glow-line{width:76px;height:2px;background:linear-gradient(90deg,var(--orange),var(--cyan),transparent);margin-bottom:2rem;margin-top:0.5rem}
 
 /* ===== TABLET PORTRAIT (768px) ===== */
 @media(max-width:768px){
   .section-inner{padding:5rem 1.5rem}
-  .section-title{letter-spacing:-0.5px}
+  .section-title{font-size:2.55rem}
 }
 
 /* ===== LARGE PHONES (600px) ===== */
 @media(max-width:600px){
   .section-inner{padding:4rem 1.2rem}
   .section-label{font-size:0.7rem}
+  .section-title{font-size:2.25rem}
 }
 
 /* ===== MEDIUM PHONES (430px) ===== */
 @media(max-width:430px){
   .section-inner{padding:3rem 1rem}
-  .section-title{font-size:clamp(1.6rem,7vw,2.4rem);letter-spacing:-0.3px}
+  .section-title{font-size:2rem;letter-spacing:0}
   .section-label{font-size:0.75rem;gap:0.5rem}
   .section-label::before{width:20px}
   .glow-line{margin-bottom:1.5rem}
@@ -47,7 +48,7 @@ section{position:relative;z-index:1}
 /* ===== SMALL PHONES (375px) ===== */
 @media(max-width:375px){
   .section-inner{padding:2.5rem 0.85rem}
-  .section-title{font-size:clamp(1.3rem,7.5vw,2rem)}
+  .section-title{font-size:1.75rem}
 }
 
 /* ===== VERY SMALL PHONES (320px) ===== */

@@ -34,7 +34,7 @@ export default function ParticleBackground() {
 
     function drawParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => {
+      particles.forEach((p, i) => {
         p.x += p.vx;
         p.y += p.vy;
         if (p.x < 0) p.x = canvas.width;
@@ -43,7 +43,9 @@ export default function ParticleBackground() {
         if (p.y > canvas.height) p.y = 0;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(249,115,22,${p.opacity})`;
+        ctx.fillStyle = i % 3 === 0
+          ? `rgba(56,189,248,${p.opacity * 0.75})`
+          : `rgba(249,115,22,${p.opacity * 0.72})`;
         ctx.fill();
       });
 
@@ -54,7 +56,7 @@ export default function ParticleBackground() {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(249,115,22,${0.06 * (1 - d / 120)})`;
+            ctx.strokeStyle = `rgba(148,163,184,${0.045 * (1 - d / 120)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

@@ -38,6 +38,8 @@ export default function Navbar() {
           className="hamburger" 
           id="hamburger" 
           aria-label="Menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobileMenu"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <span></span><span></span><span></span>

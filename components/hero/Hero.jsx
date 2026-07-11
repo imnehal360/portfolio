@@ -43,8 +43,7 @@ export default function Hero() {
   return (
     <section id="hero">
       <div className="hero-bg">
-        <div className="hero-blob hero-blob-1"></div>
-        <div className="hero-blob hero-blob-2"></div>
+        <div className="hero-scanline"></div>
       </div>
       <div className="hero-grid">
         <div className="hero-content">
@@ -57,6 +56,20 @@ export default function Hero() {
           <p className="hero-intro">
             Computer Science student passionate about building <em>scalable full stack applications</em>, <em>AI-powered systems</em>, and modern digital experiences.
           </p>
+          <div className="hero-metrics" aria-label="Portfolio highlights">
+            <div>
+              <strong>650+</strong>
+              <span>DSA Problems</span>
+            </div>
+            <div>
+              <strong>99</strong>
+              <span>ICPC Rank</span>
+            </div>
+            <div>
+              <strong>Top 1%</strong>
+              <span>Amazon ML</span>
+            </div>
+          </div>
           <div className="hero-actions">
             <a href="#projects" className="btn-primary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
