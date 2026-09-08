@@ -102,7 +102,7 @@ export default function About() {
               <div className="stat-label">CodeChef Rating — consistently improving</div>
             </div>
             <div className="stat-card">
-              <AnimatedCounter target={8.65} isDecimal={true} />
+              <AnimatedCounter target={8.52} isDecimal={true} />
               <div className="stat-label">Current CPI (IIIT Manipur)</div>
             </div>
           </div>

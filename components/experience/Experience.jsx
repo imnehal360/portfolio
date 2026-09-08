@@ -28,7 +28,7 @@ export default function Experience() {
       <div className="section-inner">
         <div className="reveal">
           <div className="section-label">Career</div>
-          <h2 className="section-title">Professional<br/><span>Experience</span></h2>
+          <h2 className="section-title">Professional<br /><span>Experience</span></h2>
           <div className="glow-line"></div>
         </div>
         <div className="experience-list">
