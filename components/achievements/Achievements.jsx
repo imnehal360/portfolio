@@ -52,9 +52,9 @@ export default function Achievements() {
           </div>
           <div className="achievement-card reveal reveal-delay-3">
             <div className="achievement-icon">💻</div>
-            <div className="achievement-title">600+ Coding Problems Solved</div>
+            <div className="achievement-title">650+ Coding Problems Solved</div>
             <div className="achievement-meta">LeetCode, CodeChef, Codeforces &amp; more</div>
-            <div className="achievement-desc">Solved 600+ algorithmic challenges across major competitive programming platforms, with a 1250+ CodeChef rating.</div>
+            <div className="achievement-desc">Solved 650+ algorithmic challenges across major competitive programming platforms, with a 1250+ CodeChef rating.</div>
           </div>
         </div>
       </div>

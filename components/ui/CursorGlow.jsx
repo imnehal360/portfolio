@@ -5,72 +5,57 @@ import { useEffect } from 'react';
 export default function CursorGlow() {
   useEffect(() => {
     const cursor = document.getElementById('cursor');
-    const ring = document.getElementById('cursor-ring');
-    if (!cursor || !ring) return;
+    if (!cursor) return;
 
-    let mx = 0, my = 0, rx = 0, ry = 0;
-    
-    const handleMouseMove = (e) => {
-      mx = e.clientX;
-      my = e.clientY;
-      cursor.style.left = mx + 'px';
-      cursor.style.top = my + 'px';
+    const onMouseMove = (e) => {
+      cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+      cursor.classList.remove('cursor-hidden');
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-
-    function lerp(a, b, t) {
-      return a + (b - a) * t;
-    }
-
-    let animationFrameId;
-    function animRing() {
-      rx = lerp(rx, mx, 0.12);
-      ry = lerp(ry, my, 0.12);
-      ring.style.left = rx + 'px';
-      ring.style.top = ry + 'px';
-      animationFrameId = requestAnimationFrame(animRing);
-    }
-    animRing();
-
-    const handleMouseEnter = () => {
-      cursor.style.transform = 'translate(-50%,-50%) scale(2)';
-      ring.style.transform = 'translate(-50%,-50%) scale(1.5)';
-      ring.style.opacity = '0.5';
+    const onMouseLeave = () => {
+      cursor.classList.add('cursor-hidden');
     };
 
-    const handleMouseLeave = () => {
-      cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-      ring.style.transform = 'translate(-50%,-50%) scale(1)';
-      ring.style.opacity = '1';
+    const onMouseEnter = () => {
+      cursor.classList.remove('cursor-hidden');
     };
+
+    const handleHoverStart = () => {
+      cursor.classList.add('cursor-hover');
+    };
+
+    const handleHoverEnd = () => {
+      cursor.classList.remove('cursor-hover');
+    };
+
+    window.addEventListener('mousemove', onMouseMove);
+    document.documentElement.addEventListener('mouseleave', onMouseLeave);
+    document.documentElement.addEventListener('mouseenter', onMouseEnter);
+
+    const interactiveSelector = 'a, button, input, textarea, select, [role="button"], .project-card, .stat-card, .skill-card, .skill-tab, .contact-link';
 
     const addHoverListeners = () => {
-      document.querySelectorAll('a, button, .skill-chip, .stat-card, .project-card, .achievement-card').forEach(el => {
-        el.addEventListener('mouseenter', handleMouseEnter);
-        el.addEventListener('mouseleave', handleMouseLeave);
+      document.querySelectorAll(interactiveSelector).forEach((el) => {
+        el.addEventListener('mouseenter', handleHoverStart);
+        el.addEventListener('mouseleave', handleHoverEnd);
       });
     };
 
     addHoverListeners();
-    
-    // Setup mutation observer to add listeners to dynamically added elements
+
     const observer = new MutationObserver(() => {
       addHoverListeners();
     });
     observer.observe(document.body, { childList: true, subtree: true });
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('mousemove', onMouseMove);
+      document.documentElement.removeEventListener('mouseleave', onMouseLeave);
+      document.documentElement.removeEventListener('mouseenter', onMouseEnter);
       observer.disconnect();
     };
   }, []);
 
-  return (
-    <>
-      <div id="cursor"></div>
-      <div id="cursor-ring"></div>
-    </>
-  );
+  return <div id="cursor" className="cursor-hidden" />;
 }
+
